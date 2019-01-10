@@ -1,0 +1,43 @@
+
+
+        <body>
+          
+
+          <div class="col-md-9 column1"  style="float:right; background-color:#aaa;     margin-top: 50px;   padding: 50px 55px;;">
+          <form #loginForm="ngForm"   (ngSubmit)="onUpdate(weakLeave,casualLeave,earnLeave,sickLeave)" style="border:1px solid #ccc">
+            
+            <div class="container">
+              <h1>Leave Master<span style="float:right;color: #ff4545;">{{output}}</span></h1>
+              
+              <hr>
+              <div class="col-md-12">
+                <label class="col-md-3" style="    margin-top: 15px;"> Weakly Off</label>
+             
+             <input type="text" class="col-md-4" name="weakLeave" required [(ngModel)]="weakLeave">
+             </div>
+             <div class="col-md-12">
+              <label class="col-md-3" style="    margin-top: 15px;"> Casual Leaves in Month </label>
+           
+           <input type="text" class="col-md-4" name="casualLeave" required [(ngModel)]="casualLeave">
+           </div>
+           <div class="col-md-12">
+            <label class="col-md-3" style="    margin-top: 15px;">Earn Leaves in Month </label>
+         
+         <input type="text" class="col-md-4" name="earnLeave" required [(ngModel)]="earnLeave">
+         </div>
+         <div class="col-md-12">
+          <label class="col-md-3" style="    margin-top: 15px;">Sick Leaves in Month</label>
+       
+       <input type="text" class="col-md-4"  name="sickLeave" required [(ngModel)]="sickLeave">
+       </div>
+       
+             
+          
+              <div class="col-md-12 clearfix">
+
+                <button type="submit" class="signupbtn">Update</button>
+              </div>
+            </div>
+          </form>
+          </div>
+          </body>

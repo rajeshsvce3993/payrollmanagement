@@ -1,0 +1,125 @@
+
+        
+        <body>
+          
+
+          <div class="col-md-9 column1"  style="float:right; background-color:#aaa;     margin-top: 50px;   padding: 50px 55px;;">
+          <form #loginForm="ngForm" (ngSubmit)="onView(employeeId)" style="border:1px solid #ccc">
+            
+            <div class="container">
+              <h1>Generate Salary<span style="float:right;color: #ff4545;">{{output}}</span></h1>
+                
+                <hr>
+                <div class="row">
+                  <div class="col-md-12" >
+                    <div class="row">
+                      <div class="col-md-4" >
+                     <label for="psw"><b>Enter Employee Id</b></label>
+                      <input type="text" placeholder="Employee Id" name="employeeId" required [(ngModel)]="employeeId" >
+                     </div>
+                     <fieldset>
+                       <legend> <label for="psw"><b>Enter Salary Details</b></label></legend>
+                     <div class="col-md-6"> 
+                    
+                     <input type="text" placeholder="Amount" name="amount" required [(ngModel)]="amount">
+                     </div>
+                     <div class="col-md-6"> 
+                     <label for="psw"><b></b></label><br>
+                     <input type="radio" value="ctc" (change)="onShow(employeeId,amount,amountType)" name="amountType"[(ngModel)]="amountType"><b> CTC</b>
+                      <input type="radio" value="netIncome" (change)="onShow(employeeId,amount,amountType)" name="amountType" [(ngModel)]="amountType"><b> Net Income</b>
+                     </div>
+</fieldset>
+             </div>
+                  </div>
+</div>                   
+          </div>  
+          </form>
+          <form #loginForm="ngForm"   (ngSubmit)="onSubmit(employeeId,annualCtc,monthlyCtc,basic,hra,pa,pf,employeePf,employerPf,esi,employeeEsi,employerEsi,gross,netIncome)" style="border:1px solid #ccc">
+              
+            <div class="col-md-4" *ngIf="view" >
+              <label ><b>employeeId</b></label>
+               <input type="text"  name="employeeId" required [(ngModel)]="employeeId" >
+              </div>
+
+            <div class="container" *ngIf="show"> 
+
+              
+                <div class="col-md-12">
+                  <label class="col-md-3" style="    margin-top: 15px;"> Annual CTC </label>
+               
+               <input type="text" class="col-md-4" name="annualCtc" required [(ngModel)]="annualCtc">
+               </div>
+                <div class="col-md-12">
+                  <label class="col-md-3" style="    margin-top: 15px;"> Monthly CTC</label>
+               
+               <input type="text" class="col-md-4" name="monthlyCtc" required [(ngModel)]="monthlyCtc">
+               </div>
+               <div class="col-md-12">
+                <label class="col-md-3" style="    margin-top: 15px;">Basic</label>
+             
+             <input type="text" class="col-md-4" name="basic" required [(ngModel)]="basic">
+             </div>
+             <div class="col-md-12">
+              <label class="col-md-3" style="    margin-top: 15px;">HRA</label>
+           
+           <input type="text" class="col-md-4"  name="hra" required [(ngModel)]="hra">
+           </div>
+           <div class="col-md-12">
+            <label class="col-md-3" style="    margin-top: 15px;">Project Allowance</label>
+         
+         <input type="text" class="col-md-4"  name="pa" required [(ngModel)]="pa">
+         </div>
+         <div class="col-md-12">
+          <label class="col-md-3" style="    margin-top: 15px;">EPF</label>
+       
+       <input type="text" class="col-md-4"  name="pf" required [(ngModel)]="pf">
+       </div>
+       <div class="col-md-12">
+        <label class="col-md-3" style="    margin-top: 15px;">Employee EPF</label>
+     
+     <input type="text" class="col-md-4"  name="employeePf" required [(ngModel)]="employeePf">
+     </div>
+     <div class="col-md-12">
+      <label class="col-md-3" style="    margin-top: 15px;">Employer EPF</label>
+   
+   <input type="text" class="col-md-4"  name="employerPf" required [(ngModel)]="employerPf">
+   </div>
+   <div class="col-md-12">
+    <label class="col-md-3" style="    margin-top: 15px;">ESIC</label>
+ 
+ <input type="text" class="col-md-4"  name="esi" required [(ngModel)]="esi">
+ </div>
+ <div class="col-md-12">
+  <label class="col-md-3" style="    margin-top: 15px;">Employee ESIC</label>
+
+<input type="text" class="col-md-4"  name="employeeEsi" required [(ngModel)]="employeeEsi">
+</div>
+<div class="col-md-12">
+  <label class="col-md-3" style="    margin-top: 15px;">Employer ESIC</label>
+  
+  <input type="text" class="col-md-4"  name="employerEsi" required [(ngModel)]="employerEsi">
+  </div>
+         <div class="col-md-12">
+          <label class="col-md-3" style="    margin-top: 15px;">Gross Income</label>
+       
+       <input type="text" class="col-md-4"  name="gross" required [(ngModel)]="gross">
+       </div>
+      
+      <div class="col-md-12">
+       <label class="col-md-3" style="    margin-top: 15px;">Net Income</label>
+    
+    <input type="text" class="col-md-4"  name="netIncome" required [(ngModel)]="netIncome">
+    </div>
+    
+                 
+              
+                  <div class="col-md-12 clearfix">
+    
+                    <button type="submit" class="signupbtn">Save</button>
+                  </div>
+             
+            </div>
+          </form>
+          </div>
+          
+          </body>

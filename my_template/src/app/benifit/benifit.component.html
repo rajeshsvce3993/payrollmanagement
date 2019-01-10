@@ -1,0 +1,89 @@
+
+        
+        <body>
+          
+
+          <div class="col-md-9 column1"  style="float:right; background-color:#aaa;     margin-top: 50px;   padding: 50px 55px;;">
+          <form #loginForm="ngForm" (ngSubmit)="onUpdate(employeePf,employerPf,interestPf,employeeEsi,employerEsi,interestEsi,hra,basic,pa)" style="border:1px solid #ccc">
+            
+            <div class="container">
+              <h1>Earnings and Deductions<span style="float:right;color: #ff4545;">{{output}}</span></h1>
+                
+                <hr>
+               
+            
+                <table style="border:1px solid #f2f2f2">
+                    <th>   <div class="col-md-12">
+                     <label class="col-md-3" style="    margin-top: 15px;"> BEBIFITS </label>
+                    <label class="col-md-3" style="    margin-top: 15px;"> EMPLOYER CONTRIBUTION % </label>
+                    <label class="col-md-3" style="    margin-top: 15px;"> EMPLOYEE CONTRIBUTION % </label>
+                    <label class="col-md-3" style="    margin-top: 15px;"> INTEREST CONTRIBUTION % </label>
+                
+                
+                 </div>  </th>
+                 
+                 
+                <tr>   <div class="col-md-12">
+                    
+                    <label class="col-md-3" style="    margin-top: 15px;"> HRA </label>
+                    <input class="col-md-3" type="text" name="hra" required [(ngModel)]="hra" >
+                    <label class="col-md-3" style="    margin-top: 15px;">------------NIL------------ </label>
+                    <label class="col-md-3" style="    margin-top: 15px;">------------NIL------------ </label>
+               
+                
+                </div>  </tr>
+                <tr>   <div class="col-md-12">
+                    
+                    <label class="col-md-3" style="    margin-top: 15px;"> BASIC </label>
+                    <input class="col-md-3" type="text" name="basic" required [(ngModel)]="basic" >
+                    <label class="col-md-3" style="    margin-top: 15px;">------------NIL------------ </label>
+                    <label class="col-md-3" style="    margin-top: 15px;">------------NIL------------ </label>
+               
+                
+                </div>  </tr>
+                <tr>   <div class="col-md-12">
+                    
+                    <label class="col-md-3 centered" style="    margin-top: 15px;"> PROJECT ALLOWANCE </label>
+                    <input class="col-md-3" type="text" name="pa" required [(ngModel)]="pa" >
+                    <label class="col-md-3" style="    margin-top: 15px;">------------NIL------------</label>
+                    <label class="col-md-3" style="    margin-top: 15px;">------------NIL------------ </label>
+               
+                
+                </div>  </tr>
+                <tr>   <div class="col-md-12">
+                    
+                    <label class="col-md-3" style="    margin-top: 15px;"> EPF </label>
+                    <input class="col-md-3" type="text" name="employerPf" required [(ngModel)]="employerPf" >
+                    <input class="col-md-3" type="text" name="employeePf" required [(ngModel)]="employeePf" >
+                    <input class="col-md-3" type="text" name="interestPf" required [(ngModel)]="interestPf" >
+               
+                
+                </div>  </tr>
+                <tr>   <div class="col-md-12">
+                    
+                    <label class="col-md-3" style="    margin-top: 15px;"> ESIC </label>
+                    <input class="col-md-3" type="text" name="employerEsi" required [(ngModel)]="employerEsi" >
+                    <input class="col-md-3" type="text" name="employeeEsi" required [(ngModel)]="employeeEsi" >
+                    <input class="col-md-3" type="text" name="interestEsi" required [(ngModel)]="interestEsi" >
+               
+                
+                </div>  </tr>
+                
+                
+                
+    
+                 </table>
+                 
+                 
+              
+                  <div class="col-md-12 clearfix">
+    
+                    <button type="submit" class="signupbtn">Save and Update</button>
+                  </div>
+             
+          </div>  
+          </form>
+         
+          </div>
+          
+          </body>

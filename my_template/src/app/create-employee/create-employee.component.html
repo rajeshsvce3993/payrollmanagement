@@ -1,0 +1,86 @@
+
+
+        <body>
+          
+
+                <div class="col-md-9 column1"  style="float:right; background-color:#aaa;     margin-top: 50px;   padding: 50px 55px;">
+                <form #loginForm="ngForm"   (ngSubmit)="onCreate(firstName,lastName,designation,dob,email,mobile,pNo,pName,pStreet,pNationality,pState,pCity,pPin,tNo,tName,tStreet,tNationality,tState,tCity,tPin)" style="border:1px solid #ccc">
+                  
+                  <div class="container">
+                    <h1>Create Employee<p style="float:right">{{emp}}<span style="float:right;color: #ff4545;">{{empId}}</span></p></h1>
+                    
+                    <hr>
+
+                    <div class="row">
+                 <div class="col-md-4" >
+                <label for="psw"><b>Enter First Name</b></label>
+                 <input type="text" placeholder="First Name" name="firstName" required [(ngModel)]="firstName" >
+                </div>
+                <div class="col-md-4"> 
+                <label for="psw"><b>Enter Last Name</b></label>
+                <input type="text" placeholder="Last Name" name="lastName" required [(ngModel)]="lastName">
+                </div>
+                <div class="col-md-4"> 
+                <label for="psw"><b>Enter Designation</b></label>
+                <input type="text" placeholder="Designation" name="designation" required [(ngModel)]="designation">
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-md-4">  
+                <label for="psw"><b>Enter Date Of Birth</b></label>
+                <input type="date" placeholder="Date Of Birth" name="dob" required [(ngModel)]="dob">
+                </div> 
+                <div class="col-md-4" >
+                <label for="psw"><b>Enter Email Id</b></label>
+                <input type="text" placeholder="Email" name="email" required [(ngModel)]="email">
+                </div>
+                <div class="col-md-4"> 
+                <label for="psw"><b>Enter Mobile Number</b></label> 
+                <input type="text" placeholder="Mobile Number" name="mobile" required [(ngModel)]="mobile">
+                </div>
+                </div>
+                
+        <div class="row">
+          <div class="col-md-6" style=" background-color:#aaa;padding:10px 10px 10px 17px;">
+        <fieldset>
+          <legend><label>Enter Permanent Address</label></legend>
+          <input type="texts" placeholder="Building No" name="pNo" required [(ngModel)]="pNo">
+          
+          <input type="textss" placeholder="Building Name" name="pName" required [(ngModel)]="pName"><br>
+          <input type="text" placeholder="Street Name,Locality" name="pStreet" required [(ngModel)]="pStreet"><br>
+          <input type="textt" placeholder="Nationality" name="pNationality" required [(ngModel)]="pNationality">
+          
+          <input type="textt" placeholder="State" name="pState" required [(ngModel)]="pState"><br>
+          <input type="textt" placeholder="City" name="pCity" required [(ngModel)]="pCity">
+          
+          <input type="textt" placeholder="PIN" name="pPin" required [(ngModel)]="pPin"><br>
+        </fieldset>
+          </div>  
+          <div class="col-md-6" style="background-color:#aaa; padding: 10px 10px 10px 17px;">
+              <fieldset>
+                  <legend><label>Enter Current Address</label></legend>
+                  <input type="texts" placeholder="Building No" name="tNo" required [(ngModel)]="tNo">
+          
+          <input type="textss" placeholder="Building Name" name="tName" required [(ngModel)]="tName"><br>
+          <input type="text" placeholder="Street Name,Locality" name="tStreet" required [(ngModel)]="tStreet"><br>
+          <input type="textt" placeholder="Nationality" name="tNationality" required [(ngModel)]="tNationality">
+          
+          <input type="textt" placeholder="State" name="tState" required [(ngModel)]="tState"><br>
+          <input type="textt" placeholder="City" name="tCity" required [(ngModel)]="tCity">
+          
+          <input type="textt" placeholder="PIN" name="tPin" required [(ngModel)]="tPin"><br>
+                  
+        
+              </fieldset>
+                </div>
+                </div>
+                 
+                
+                    <div class="col-md-12 clearfix">
+
+                      <button type="submit" class="signupbtn">Create</button>
+                    </div>
+                  </div>
+                </form>
+                </div>
+                </body>

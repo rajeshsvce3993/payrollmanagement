@@ -1,0 +1,31 @@
+
+
+
+<body>
+               
+
+  <div class="col-md-9 column1"  style="background-color:#aaa;    float:right;   margin-top: 50px;    padding: 50px 55px;;">
+  <form #loginForm="ngForm"   (ngSubmit)="onUpload(employeeId)" style="border:1px solid #ccc">
+    
+    <div class="container">
+      <h1>Upload Attendence<span style="float:right;color: #ff4545;">{{output}}</span></h1>
+      
+      <hr>
+
+    <!-- <label for="file">Choose File</label> -->
+    <input type=”file” #fileImportInput name=”File Upload” id=”txtFileUpload” (change)=”fileChangeListener($event)” accept=”.csv” />
+      
+
+  <div class="col-md-12 " style="padding: 21px 63px 60px 18px">
+  <label class="col-md-3" style="    margin-top: 15px;">Upload CSV</label>
+  <input class="col-md-4" type='file' id='photo' name='photo' (change)="readAttendence($event)">
+
+  </div>
+  
+   
+  
+      
+    </div>
+  </form>
+  </div>
+  </body>

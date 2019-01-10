@@ -1,0 +1,58 @@
+
+        
+        <body>
+          
+
+          <div class="col-md-9 column1"  style="float:right; background-color:#aaa;     margin-top: 50px;   padding: 50px 55px;;">
+          <form #loginForm="ngForm" (ngSubmit)="onView(employeeId)" style="border:1px solid #ccc">
+            
+            <div class="container">
+              <h1>View Employee<span style="float:right;color: #ff4545;">{{output}}</span></h1>
+                
+                <hr>
+                <div class="row">
+                  <div class="col-md-12" >
+                    <div>
+                    <label class="col-md-3" style="    margin-top: 15px;"> Enter Employee Id</label>
+</div><div>
+                    <input type="text" class="col-md-3" placeholder="Employee Id" name="employeeId" required [(ngModel)]="employeeId">
+                    </div><div>
+                    <button type="submit" class="col-md-3 signuppbtn" style="margin: -63px 120px; padding: 10px 18px;">View</button>
+               </div>
+                  </div>
+</div>                   
+          </div>  
+          </form>
+          <form #loginForm="ngForm"   (ngSubmit)="onUpload(employeeId)" style="border:1px solid #ccc">
+      
+            <div class="container"  *ngIf="show">
+              
+      
+            
+           
+          
+          <div class="col-md-12 " style="padding: 21px 63px 60px 18px">
+          <label class="col-md-3" style="    margin-top: 15px;">Photo</label>
+          
+          <img class="col-md-5" [src]="photo">
+          </div>
+          <div class="col-md-12" style="padding: 21px 63px 60px 18px">
+              <label class="col-md-3" style="    margin-top: 15px;">Aadhaar</label>
+              
+              <img class="col-md-5" [src]="aadhaar">
+              </div>
+              <div class="col-md-12" style="padding: 21px 63px 60px 18px">
+                  <label class="col-md-3" style="    margin-top: 15px;">PAN</label>
+                  
+                  <img class="col-md-5" [src]="pan">
+                  </div>
+                  
+           
+          
+             
+            </div>
+          </form>
+          
+          </div>
+          
+          </body>

@@ -1,0 +1,109 @@
+
+        
+        <body>
+          
+
+                <div class="col-md-9 column1"  style="float:right; background-color:#aaa;     margin-top: 50px;   padding: 50px 55px;;">
+                <form #loginForm="ngForm" (ngSubmit)="onView(employeeId)" style="border:1px solid #ccc">
+                  
+                  <div class="container">
+                    <h1>View Employee<span style="float:right;color: #ff4545;">{{output}}</span></h1>
+                      
+                      <hr>
+                      <div class="row">
+                        <div class="col-md-12" >
+                          <div>
+                          <label class="col-md-3" style="    margin-top: 15px;"> Enter Employee Id</label>
+      </div><div>
+                          <input type="text" class="col-md-3" placeholder="Employee Id" name="employeeId" required [(ngModel)]="employeeId">
+                          </div><div>
+                          <button type="submit" class="col-md-3 signuppbtn" style="margin: -63px 120px; padding: 10px 18px;">View</button>
+                     </div>
+                        </div>
+  </div>                   
+                </div>  
+                </form>
+                <form #loginForm="ngForm"   (ngSubmit)="onUpdate(employeeNumber,firstName,lastName,designation,dob,email,mobile,pNo,pName,pStreet,pNationality,pState,pCity,pPin,tNo,tName,tStreet,tNationality,tState,tCity,tPin)" style="border:1px solid #ccc">
+                    
+                 
+                  <div class="container" *ngIf="show"> 
+
+                    <div class="col-md-4" [hidden]='true' >
+                      <label for="psw"><b>Employee Number</b></label>
+                       <input type="text"  name="employeeNumber" required [(ngModel)]="employeeNumber" >
+                      </div>
+
+                    <div class="row" >
+                 <div class="col-md-4" >
+                <label for="psw"><b>First Name</b></label>
+                 <input type="text"  name="firstName" required [(ngModel)]="firstName" >
+                </div>
+                <div class="col-md-4"> 
+                <label for="psw"><b>Last Name</b></label>
+                <input type="text" name="lastName" required [(ngModel)]="lastName">
+                </div>
+                <div class="col-md-4"> 
+                <label for="psw"><b>Designation</b></label>
+                <input type="text"  name="designation" required [(ngModel)]="designation">
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-md-4">  
+                <label for="psw"><b>Date Of Birth</b></label>
+                <input type="date"  name="dob" required [(ngModel)]="dob">
+                </div> 
+                <div class="col-md-4" >
+                <label for="psw"><b>Email Id</b></label>
+                <input type="text"  name="email" required [(ngModel)]="email">
+                </div>
+                <div class="col-md-4"> 
+                <label for="psw"><b>Mobile Number</b></label> 
+                <input type="text"  name="mobile" required [(ngModel)]="mobile">
+                </div>
+                </div>
+                
+        <div class="row">
+          <div class="col-md-6" style=" background-color:#aaa;padding:10px 10px 10px 17px;">
+        <fieldset>
+          <legend><label>Permanent Address</label></legend>
+          <input type="texts"  name="pNo" required [(ngModel)]="pNo">
+          
+          <input type="textss"  name="pName" required [(ngModel)]="pName"><br>
+          <input type="text"  name="pStreet" required [(ngModel)]="pStreet"><br>
+          <input type="textt"  name="pNationality" required [(ngModel)]="pNationality">
+          
+          <input type="textt"  name="pState" required [(ngModel)]="pState"><br>
+          <input type="textt"  name="pCity" required [(ngModel)]="pCity">
+          
+          <input type="textt"  name="pPin" required [(ngModel)]="pPin"><br>
+        </fieldset>
+          </div>  
+          <div class="col-md-6" style="background-color:#aaa; padding: 10px 10px 10px 17px;">
+              <fieldset>
+                  <legend><label>Current Address</label></legend>
+                  <input type="texts" name="tNo" required [(ngModel)]="tNo">
+          
+          <input type="textss" name="tName" required [(ngModel)]="tName"><br>
+          <input type="text" name="tStreet" required [(ngModel)]="tStreet"><br>
+          <input type="textt" name="tNationality" required [(ngModel)]="tNationality">
+          
+          <input type="textt"  name="tState" required [(ngModel)]="tState"><br>
+          <input type="textt"  name="tCity" required [(ngModel)]="tCity">
+          
+          <input type="textt"  name="tPin" required [(ngModel)]="tPin"><br>
+                  
+        
+              </fieldset>
+                </div>
+                </div>
+                 
+                
+                    <div class="col-md-12 clearfix">
+
+                      <button type="submit" class="signupbtn">Update</button>
+                    </div>
+                  </div>
+                </form>
+                </div>
+                
+                </body>

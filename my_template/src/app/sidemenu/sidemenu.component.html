@@ -1,0 +1,50 @@
+
+<body>
+  <div *ngIf="isUserLoggedIn">
+    <app-top></app-top>
+    
+  <div class="col-md-3 side"  style="background-color:#2a3f56;       margin-top: 50px;    padding: 50px 40px;">
+    <div class="sidenav dropdown">
+      <a class="dropbtn" >MASTER MANAGEMENT <i class="down"></i></a>
+      <div class="dropdown-content">
+        <a href="/dashboard/benifits">EARNINGS & DEDUCTIONS</a>
+        <a href="/dashboard/leavemaster">LEAVE MASTER</a>
+        
+        
+      </div>
+    </div>  
+    <div class="sidenav dropdown">
+          <a class="dropbtn" >EMPLOYEE MANAGEMENT <i class="down"></i></a>
+          <div class="dropdown-content">
+            <a href="/dashboard/createemployee">CREATE EMPLOYEE</a>
+            <a href="/dashboard/uploadempproof">UPLOAD EMPLOYEE PROOF</a>
+            <a href="/dashboard/createbankdetails">CREATE BANK DETAILS</a>
+            <a href="/dashboard/generatesalary">GENERATE SALARY</a>
+            
+          </div>
+        </div>
+        <div class="sidenav dropdown" style="padding:0px 0px">
+            <a class="dropbtn" >VIEW MANAGEMENT <i class="down"></i></a>
+            <div class="dropdown-content">
+              <a href="/dashboard/viewemployee">VIEW EMPLOYEE</a>
+              <a href="/dashboard/viewempproof">VIEW EMPLOYEE PROOF</a>
+              <a href="/dashboard/viewbankdetails">VIEW BANK DETAILS</a>
+              <a href="/dashboard/viewsalary">VIEW SALARY</a>
+              
+            </div>
+          </div>
+          <div class="sidenav dropdown" style="padding:0px 0px">
+            <a class="dropbtn" >PAY MANAGEMENT <i class="down"></i></a>
+            <div class="dropdown-content">
+              <a href="/dashboard/attendence">UPLOAD ATTENDENCE</a>
+              
+              
+            </div>
+          </div>
+        
+      </div>  </div>
+      </body>
+
+        
+    
+  
